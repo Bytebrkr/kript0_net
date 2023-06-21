@@ -96,6 +96,46 @@ def perform_traceroute(target_host):
     except subprocess.CalledProcessError:
         print("Traceroute failed.")
 
+def network_service_enumeration(target_host):
+    print("Network Service Enumeration")
+    print("---------------------------")
+
+    open_ports = []
+
+    for port in range(1, 65536):
+        try:
+            # Create a socket object
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+            # Set a timeout value
+            sock.settimeout(1)
+
+            # Attempt to connect to the port
+            result = sock.connect_ex((target_host, port))
+
+            if result == 0:
+                service_name = socket.getservbyport(port)
+                open_ports.append((port, service_name))
+                print(f"Port {port} ({service_name}) is open.")
+
+            # Close the socket
+            sock.close()
+
+        except KeyboardInterrupt:
+            print("Port scanning stopped by user.")
+            break
+
+        except socket.error:
+            print("Couldn't connect to server.")
+            break
+
+    if open_ports:
+        print("\nOpen Ports:")
+        for port, service_name in open_ports:
+            print(f"Port {port}: {service_name}")
+    else:
+        print("No open ports found.")
+
 def port_scanner(target_host):
     print("Kript0boi - Network Vulnerability Scanner")
     print("---------------------------------------")
@@ -140,6 +180,9 @@ def port_scanner(target_host):
 
     # Perform traceroute
     perform_traceroute(target_host)
+
+# Call the network_service_enumeration function
+network_service_enumeration(target_host)
 
 # Call the port_scanner function
 port_scanner(target_host)

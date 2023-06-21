@@ -12,6 +12,8 @@ Common Misconfigurations: The script includes checks for common misconfiguration
 
 Network Traceroute: After scanning the ports, the script performs a traceroute to the target host to analyze the network path. It displays the traceroute output, helping to identify network issues or bottlenecks.
 
+network service enumeration: function will list all the open ports on the target host
+
 # Usage
 Run the script by executing the following command: python kript0_net.py.
 
