@@ -41,7 +41,7 @@ check_command "python3"
 # Check the Python version
 check_python_version
 
-# Check if the required Python packages are installed
+
 check_python_packages
 
 # If all requirements are met, continue with executing the script
