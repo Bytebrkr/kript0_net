@@ -1,5 +1,5 @@
-# Kript0_net - Network Vulnerability Scanner
-Kript0boi is a Python script designed to scan a target network for potential vulnerabilities and security risks. It provides a set of features to help identify open ports, perform reverse DNS lookup, validate SSL/TLS certificates, check for common misconfigurations, and perform network traceroute.
+# Kript0_net - Basic Network Vulnerability Scanner
+Kript0_net is a Python script designed to scan a target network for potential vulnerabilities and security risks. It provides a set of features to help identify open ports, perform reverse DNS lookup, validate SSL/TLS certificates, check for common misconfigurations, and perform network traceroute.
 
 # Features
 Port Scanning: The script scans a range of ports on the target host to identify open ports. It displays the open ports along with their associated services.
