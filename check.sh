@@ -47,5 +47,4 @@ check_python_packages
 # If all requirements are met, continue with executing the script
 echo "System meets the requirements. Proceeding with the script execution."
 
-# Add the command to run the Python script
-python3 your_script_name.py
+
