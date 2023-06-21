@@ -45,6 +45,6 @@ check_python_version
 check_python_packages
 
 # If all requirements are met, continue with executing the script
-echo "System meets the requirements. Proceeding with the script execution."
+echo "System meets the requirements. Run the program"
 
 
