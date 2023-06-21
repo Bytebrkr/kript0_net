@@ -26,7 +26,7 @@ Python 3.x
 Socket module
 SSL module
 Subprocess module
-Disclaimer
+# Disclaimer
 This script is intended for educational and security research purposes only. Use it responsibly and with proper authorization. The author and contributors are not responsible for any misuse or damage caused by this script. Always comply with all legal and ethical guidelines when conducting network security assessments.
 
 # License
